@@ -14,7 +14,6 @@ A fun and interactive geography-based challenge where users can compete, track t
 - **Styling:** Tailwind CSS
 - **Backend:** Node.js & Express
 - **Database:** MongoDB (Mongoose)
-- **Auth:** JWT-based authentication
 - **Deployment:** Vercel
 
 ## 📦 Installation
