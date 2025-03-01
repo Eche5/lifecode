@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { loginUser, RegisterUser } from "@/actions/user.actions";
@@ -9,7 +10,7 @@ function MainMenu() {
   const [showModal, setShowModal] = useState(false);
   const [username, setUsername] = useState("");
   const [gameType, setGameType] = useState("");
-  const notify = (message: string, icon: any) => toast(message, { icon });
+  const notify = (message: string, icon: string) => toast(message, { icon });
   const searchParams = useSearchParams();
 
   const inviteScore = searchParams.get("score");

@@ -15,7 +15,7 @@ export const loginUser = async (username: string) => {
       throw new Error("username not found");
     }
     const data = await response.json();
-    console.log(data);
+
     return data;
   } catch (error) {
     return { error: error instanceof Error ? error.message : "Unknown error" }; // Return error message
@@ -75,7 +75,6 @@ export const getLeaderBoard = async () => {
       throw new Error("username not found");
     }
     const data = await response.json();
-    console.log(data);
     return data;
   } catch (error) {
     return { error: error instanceof Error ? error.message : "Unknown error" }; // Return error message

@@ -1,7 +1,15 @@
 "use client";
+
 import { getLeaderBoard } from "@/actions/user.actions";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+
+interface userData {
+  _id: string;
+  score: number;
+  username: string;
+  gamesPlayed: number;
+}
 
 function LeaderBoard() {
   const [leaderboard, setLeaderBoard] = useState([]);
@@ -38,7 +46,7 @@ function LeaderBoard() {
               </tr>
             </thead>
             <tbody>
-              {leaderboard.map((board: any, index: number) => (
+              {leaderboard.map((board: userData, index: number) => (
                 <tr
                   key={board._id}
                   className="hover:bg-gray-100 border-b text-gray-700 text-[12px]"
